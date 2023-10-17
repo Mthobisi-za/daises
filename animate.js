@@ -1,5 +1,7 @@
 let lastKnownScrollPosition = 0;
 let ticking = false;
+var si = 700;
+var tl = gsap.timeline({ repeat: -1, repeatDelay: 2, yoyo: true });
 
 function doSomething(scrollPos) {
     // Do something with the scroll position
@@ -22,10 +24,18 @@ document.addEventListener("scroll", (event) => {
     var window_size = window.screen.height
     console.log(window_size + ' window')
 });
+document.addEventListener('resize', () => {
+    var size = window.screen.width;
+    if (size > 900) {
+        si = 400
+        tl.restart();
+    } else {
+        si = 200
+        tl.restart();
+    }
+})
 
-gsap.to(".space_one", {
-    scrollTrigger: ".top_section", // start the animation when ".box" enters the viewport (once)
-    y: -50,
-    start: "90% bottom",
-    duration: 5
+tl.to(".space_one", {
+    y: -si,
+    duration: 5,
 });

@@ -14,7 +14,7 @@ img {
 
 .space {
     /* min-height: 100px; */
-    max-height: 100px;
+    max-height: 150px;
     overflow-y: hidden;
 }
 
@@ -26,7 +26,7 @@ img {
 
 .form_section {
     display: grid;
-    grid-template-columns: 40% 40%;
+    grid-template-columns: 40% 50%;
     align-items: center;
     justify-content: space-between;
     width: 80%;
@@ -46,6 +46,13 @@ img {
     grid-template-columns: 100%;
     row-gap: 20px;
     text-align: left;
+    justify-content: space-between;
+}
+
+.group_top {
+    display: grid;
+    grid-template-columns: 48% 48%;
+    justify-content: space-between;
 }
 
 .form-group {
@@ -124,8 +131,8 @@ img {
 
 .btn_form {
     display: grid;
-    grid-template-columns: 40% 50%;
-    align-items: center;
+    grid-template-columns: 30% 50%;
+    align-items: start;
     justify-content: left;
     column-gap: 10%;
     width: 100%;
@@ -163,6 +170,12 @@ img {
     padding-top: 50px;
 }
 
+.colum_grid {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
 .column_text {
     padding-left: 10px;
     padding-right: 10px;
@@ -178,6 +191,7 @@ img {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
 }
 
 .check_container {
@@ -187,6 +201,20 @@ img {
 .check_container p {
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 14;
+}
+
+.vid_section {}
+
+.vid_section iframe {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    padding: 0px;
+    margin: 0;
+}
+
+.top_minus {
+    margin-top: -20px;
 }
 
 @media (max-width:970px) {
